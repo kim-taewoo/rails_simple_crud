@@ -1,0 +1,14 @@
+<html>
+    <body>
+        <h1>기존 글을 수정해 보아요!</h1>
+        <form action='/blogs/<%= @blog.id%>' method='POST'>
+            <input type="hidden" name="_method" value="patch"></input>
+            <input type="hidden" name="authenticity_token" value="<%= @token%>"></input>
+
+            <input name="input_title" type="text"></input>
+            <input name="input_link" type="text"></input>
+            <input name="input_content" type="text"></input>
+            <input type="submit"></input>
+        </form>
+    </body>
+</html>

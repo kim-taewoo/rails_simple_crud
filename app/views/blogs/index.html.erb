@@ -1,0 +1,10 @@
+<html>
+    <body>
+        <h1>LIST</h1>
+        <% @blogs.each do |blog| %>
+            <a href="/blogs/<%= blog.id%>"><%= blog.title %></a><br>
+        <% end%>
+
+        <button><a style="text-decoration:none;" href="/blogs/new">새 글 쓰기</a></button>
+    </body>
+</html>
